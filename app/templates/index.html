@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Predict My Stock</title>
+    <link rel="stylesheet" href="{% static 'bulma.css' %}" />
+</head>
+
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Predict My Stock
+                </h1>
+            </div>
+        </div>
+    </section>
+    <form action="/predict/" method="post">{% csrf_token %}
+        <div>Enter Ticker of Company&nbsp;&nbsp;&nbsp;::&nbsp;&nbsp;<input type="text" name="ticker"></div><br>
+        <div>Enter Days to Predict&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::&nbsp;&nbsp;<input type="text" name="days"></div><br>
+        <input type="submit" value="Predict">
+    </form>
+
+
+    <div>
+
+            {{ d }}
+            
+    </div>
+    <!--<section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-offset-4 is-4">
+                    {% for city_weather in weather_data %}
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-50x50">
+                                    <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <span class="title" style="text-transform: capitalize;">{{ city_weather.city }}</span>
+                                        <br>
+                                        <span class="subtitle">{{ city_weather.temperature }} °C</span>
+                                        <br><div style="text-transform: capitalize;">{{ city_weather.description }}</div> 
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="media-right">
+                                 <a href="{% url 'delete_city' city_weather.city %}"><button class="delete"></button></a>
+                            </div>
+                        </article>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>-->
+</body>
+
+</html>
