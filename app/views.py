@@ -17,7 +17,7 @@ def home(request):
 
 
 def predict(request):
-    
+    quandl.ApiConfig.api_key = "RHVBxuQQR_xxy8SPBDGV"
     ticker_value = request.POST.get('ticker')
     number_of_days = request.POST.get('days')
     number_of_days = int(number_of_days)

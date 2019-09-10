@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <section class="hero is-primary">
+    <section class="hero is-link">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
@@ -26,7 +26,7 @@
     <form action="/predict/" method="post">{% csrf_token %}
         <div class="label">Enter Ticker of Company <br><input type="text" name="ticker" class="input is-info is-rounded "></div><br>
         <div class="label">Enter Days to Predict <br><input class="input is-info is-rounded" type="text" name="days"></div><br>
-        <input type="submit" value="Predict" class="button is-primary is-medium is-rounded">
+        <input type="submit" value="Predict" class="button is-link is-medium is-rounded">
     </form>
     </section>
     <br><br>
