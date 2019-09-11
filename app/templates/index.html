@@ -30,6 +30,25 @@
     </form>
     </section>
     <br><br>
+    <section class="columns is-mobile is-centered">
+        <strong> Prediction Accuracy ::&nbsp;&nbsp;{{ confidence }}</strong>
+
+        </section>
+        <br><br>
+        <section class="columns is-mobile is-centered">
+            <strong>Predictions for {{ number_of_days }} days of {{ ticker_value }} stock</strong>
+      </section>
+      <br>
+        <section class="columns is-mobile is-centered">
+          
+        <ul>{% for forecast in forecast %}
+          <li>{{ forecast }}</li>
+        {% endfor %}
+      </ul>
+        </section>
+        
+    
+    <br><br>
     <div class="columns is-mobile is-centered">
         <table class="table is-responsive">
             <thead>
@@ -62,14 +81,14 @@
               </tr>
               <tr>
                 <td>Uber Technologies</td>
-                <td>Uber</td>
+                <td>UBER</td>
               </tr>
             </tbody>
           </table>
         
         </div>
             
-            
+
     </div>
     <!--<section class="section">
         <div class="container">

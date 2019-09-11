@@ -11,17 +11,12 @@ from sklearn import preprocessing, model_selection, svm
 def home(request):
     return render(request,'index.html')
 
-
-
-
-
-
 def predict(request):
     quandl.ApiConfig.api_key = "RHVBxuQQR_xxy8SPBDGV"
     ticker_value = request.POST.get('ticker')
     number_of_days = request.POST.get('days')
     number_of_days = int(number_of_days)
-
+    i = 0
     
     df = quandl.get("WIKI/"+ticker_value+"")
     df = df[['Adj. Close']]
@@ -51,5 +46,6 @@ def predict(request):
 
     forecast_prediction = clf.predict(X_forecast)
     print(forecast_prediction)
+    forecast = forecast_prediction.tolist()
     d = dict(enumerate(forecast_prediction.flatten(), 1))
-    return render(request,'index.html',d)
+    return render(request,'index.html',{'forecast_prediction' : forecast_prediction,'confidence' : confidence,'forecast': forecast,'ticker_value':ticker_value,'number_of_days':number_of_days})
