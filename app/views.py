@@ -5,8 +5,6 @@ import numpy as np
 import datetime
 from sklearn.linear_model import LinearRegression
 from sklearn import preprocessing, model_selection, svm
-# Create your views here.
-
 
 def home(request):
     return render(request,'index.html')
