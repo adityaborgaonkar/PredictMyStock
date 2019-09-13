@@ -1,6 +1,6 @@
 # PredictMyStock
 
-### A Stock Market Prediction Web App in Django using Quandl API and Linear Regression. Using Quandl API, I fetched stock market values from the date since the company is IPO. The stock data is available till 27.03.2018. Then from input number of days 'n' we take that number of days data as our Prediction data and rest is training data and apply Linear Regression model. Suppose n=10, then data from 17.03.2018 to 27.03.2018 is our Prediction data and rest is training data. The accuracy most of the times is above 90%. 
+ A Stock Market Prediction Web App in Django using Quandl API and Linear Regression. Using Quandl API, I fetched stock market values from the date since the company is IPO. The stock data is available till 27.03.2018. Then from input number of days 'n' we take that number of days data as our Prediction data and rest is training data and apply Linear Regression model. Suppose n=10, then data from 17.03.2018 to 27.03.2018 is our Prediction data and rest is training data. The accuracy most of the times is above 90%. 
 
 
 ![PredictMyStock Homepage](predictmystock.jpg)
