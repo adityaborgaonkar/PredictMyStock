@@ -1,4 +1,4 @@
-Django==2.2.8
+Django==2.2.13
 numpy==1.17.2
 pandas==0.25.1
 Quandl==3.4.8
